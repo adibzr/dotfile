@@ -8,3 +8,4 @@ background-opacity = 0.9
 gtk-titlebar = false
 # custom-shader = /home/chris/bloom.glsl
 #custom-shader = /home/chris/crt.glsl
+keybind = ctrl+v=paste_from_clipboard
