@@ -8,36 +8,41 @@
 }
 
 #waybar {
-  background: transparent;
-  color: #c6d0f5;
+  background: rgba(24, 24, 37, 0.7);
+  /* subtle transparent bg */
+  color: #cdd6f4;
+  border-radius: 10px;
+  margin: 4px 8px;
+  padding: 4px;
 }
 
 #workspaces {
-  border-radius: 5px;
-  background: #101010;
-  margin-left: 2px;
+  border-radius: 8px;
+  background: rgba(49, 50, 68, 0.6);
+  margin-left: 4px;
 }
 
 #workspaces button {
-  color: #babbf1;
-  border-radius: 5px;
-  padding: 0.4rem;
+  color: #a6adc8;
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  transition: background 0.2s;
 }
 
 #workspaces button.active {
-  color: #99d1db;
-  border-radius: 5px;
+  color: #89b4fa;
+  background: rgba(137, 180, 250, 0.15);
+}
+
+#workspaces button:hover {
+  background: rgba(137, 180, 250, 0.25);
 }
 
 button {
   background: transparent;
 }
 
-#workspaces button:hover {
-  background: #1e1e1e;
-  border: 0px solid transparent;
-}
-
+#bluetooth,
 #custom-music,
 #tray,
 #backlight,
@@ -52,43 +57,37 @@ button {
 #custom-weather,
 #custom-uptime,
 #custom-docker {
-  background-color: #101010;
+  background: rgba(49, 50, 68, 0.6);
   padding: 0.5rem 1rem;
+  margin: 2px 3px;
+  border-radius: 8px;
 }
 
+/* Colors for modules */
 #clock {
-  color: #8caaee;
-  border-radius: 5px;
-}
-
-#custom-weather {
-  color: #8caaee;
-  margin-left: 0.5rem;
-  border-radius: 5px;
-}
-
-#battery {
-  color: #a6d189;
+  color: #89b4fa;
 }
 
 #battery.charging {
-  color: #a6d189;
+  color: #a6e3a1;
 }
 
 #battery.warning:not(.charging) {
-  color: #e78284;
+  color: #f38ba8;
 }
 
 #backlight {
-  color: #e5c890;
-}
-
-#backlight,
-#battery {
-  border-radius: 0;
+  color: #f9e2af;
 }
 
 #pulseaudio {
-  color: #ea999c;
-  border-radius: 5px 0px 0px 5px;
+  color: #fab387;
+}
+
+#memory {
+  color: #cba6f7;
+}
+
+#memory {
+  font-size: 13px;
 }

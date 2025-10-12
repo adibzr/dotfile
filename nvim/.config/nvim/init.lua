@@ -36,7 +36,17 @@ vim.schedule(function()
 	vim.opt.clipboard = "unnamedplus"
 end)
 
+-- Don't copy deleted text into clipboard
+vim.keymap.set({ "n", "v" }, "d", '"_d')
+vim.keymap.set({ "n", "v" }, "c", '"_c')
+vim.keymap.set("n", "x", '"_x')
+
 -- Enable break indent
+-- -- Don't copy deleted text into clipboard
+vim.keymap.set({ "n", "v" }, "d", '"_d')
+vim.keymap.set({ "n", "v" }, "c", '"_c')
+vim.keymap.set("n", "x", '"_x')
+
 vim.opt.breakindent = true
 
 -- Save undo history
@@ -556,7 +566,15 @@ require("lazy").setup({
 			-- See :help vim.diagnostic.Opts
 			vim.diagnostic.config({
 				severity_sort = true,
-				float = { border = "rounded", source = "if_many" },
+				float = {
+					border = "rounded",
+					source = "if_many",
+					focusable = true,
+					style = "minimal",
+					header = "",
+					prefix = "",
+					wrap = true,
+				},
 				underline = { severity = vim.diagnostic.severity.ERROR },
 				signs = vim.g.have_nerd_font and {
 					text = {
@@ -950,6 +968,7 @@ require("lazy").setup({
 	--
 	--  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
 	{ import = "custom.plugins" },
+	--custon keybinds
 	--
 	-- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
 	-- Or use telescope!

@@ -1,0 +1,105 @@
+/* Catppuccin Mocha theme for gsimplecal */
+/* Save this as ~/.config/gsimplecal/gtk.css */
+
+@define-color base #1e1e2e;
+@define-color mantle #181825;
+@define-color crust #11111b;
+@define-color text #cdd6f4;
+@define-color subtext1 #bac2de;
+@define-color subtext0 #a6adc8;
+@define-color surface0 #313244;
+@define-color surface1 #45475a;
+@define-color surface2 #585b70;
+@define-color mauve #cba6f7;
+@define-color pink #f38ba8;
+@define-color blue #89b4fa;
+@define-color sky #74c7ec;
+@define-color green #a6e3a1;
+@define-color yellow #f9e2af;
+
+/* Main calendar window */
+window {
+  background-color: @base;
+  border-radius: 12px;
+  border: 1px solid @surface0;
+}
+
+/* Calendar widget */
+calendar {
+  background-color: @base;
+  color: @text;
+  border-radius: 8px;
+  font-family: monospace;
+  font-size: 11px;
+  padding: 8px;
+}
+
+/* Calendar header */
+calendar.header {
+  background-color: @mantle;
+  color: @mauve;
+  font-weight: bold;
+}
+
+/* Navigation buttons */
+calendar.button {
+  background-color: transparent;
+  color: @blue;
+  border: none;
+  border-radius: 6px;
+  padding: 4px;
+}
+
+calendar.button:hover {
+  background-color: @surface0;
+  color: @sky;
+}
+
+/* Day labels (Mon, Tue, etc.) */
+calendar.day-name {
+  color: @subtext1;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+/* Day numbers */
+calendar.day {
+  color: @text;
+  background-color: transparent;
+  border-radius: 4px;
+  padding: 2px;
+}
+
+calendar.day:hover {
+  background-color: @surface0;
+  color: @pink;
+}
+
+/* Today */
+calendar.today {
+  background-color: @blue;
+  color: @base;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+calendar.today:hover {
+  background-color: @sky;
+}
+
+/* Selected day */
+calendar:selected {
+  background-color: @mauve;
+  color: @base;
+}
+
+/* Other month days */
+calendar.other-month {
+  color: @subtext0;
+}
+
+/* Week numbers */
+calendar.week-number {
+  color: @subtext0;
+  font-size: 9px;
+}
