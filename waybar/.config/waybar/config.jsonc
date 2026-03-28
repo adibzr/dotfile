@@ -19,11 +19,11 @@
   "modules-right": [
     "pulseaudio",
     "battery",
-    "network",
+    "tray",
     "cpu",
     "memory",
     "bluetooth",
-    "tray"
+    "custom/hyprmon"
   ],
   "hyprland/workspaces": {
     "format": "{name}: {icon}",
@@ -117,5 +117,11 @@
       "󰁹"
     ],
     "tooltip": true
+  },
+  "custom/hyprmon": {
+    "format": "",
+    "tooltip": true,
+    "tooltip-format": "Monitor Manager",
+    "on-click": "ghostty -e hyprmon"
   }
 }

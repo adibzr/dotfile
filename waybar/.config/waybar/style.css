@@ -91,3 +91,7 @@ button {
 #memory {
   font-size: 13px;
 }
+
+#custom-hyprmon {
+  padding: 0 10px;
+}
