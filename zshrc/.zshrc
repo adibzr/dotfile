@@ -12,3 +12,4 @@ SAVEHIST=50000
 setopt inc_append_history
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="$HOME/.local/bin:$PATH"
