@@ -83,17 +83,20 @@
     "format": " {used:0.1f}G/{total:0.1f}G"
   },
   "pulseaudio": {
-    "format": "{icon} {volume}%",
-    "format-muted": "",
-    "format-icons": {
-      "default": [
-        "",
-        "",
-        " "
-      ]
-    },
-    "on-click": "pavucontrol"
+  "format": "{icon} {volume}%",
+  "format-muted": "",
+  "format-icons": {
+    "default": [
+      "",
+      "",
+      " "
+    ]
   },
+    "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+  "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+  "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+  "on-click": "pavucontrol"
+},
   "battery": {
     "interval": 5,
     "states": {
@@ -122,6 +125,6 @@
     "format": "",
     "tooltip": true,
     "tooltip-format": "Monitor Manager",
-    "on-click": "ghostty -e hyprmon"
+    "on-click": "nwg-displays"
   }
 }

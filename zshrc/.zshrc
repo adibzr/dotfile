@@ -13,3 +13,5 @@ setopt inc_append_history
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="$HOME/.local/bin:$PATH"
+DISABLE_AUTO_TITLE="true"
+
