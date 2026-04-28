@@ -81,10 +81,12 @@ install_pkgs \
 # ==========================================================================
 section "Screenshots & Display"
 install_pkgs \
-  hyprshot \
   brightnessctl \
   grim \
-  slurp
+  slurp \
+  jq \
+  wl-clipboard \
+  libnotify
 
 # ==========================================================================
 section "Editor — Neovim + dependencies"
