@@ -15,3 +15,7 @@ setopt inc_append_history
 export PATH="$HOME/.local/bin:$PATH"
 DISABLE_AUTO_TITLE="true"
 
+
+# >>> railway initialize >>>
+source "$HOME/.railway/env"
+# <<< railway initialize <<<
