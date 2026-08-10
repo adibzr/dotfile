@@ -19,11 +19,11 @@
   "modules-right": [
     "pulseaudio",
     "battery",
-    "tray",
-    "cpu",
     "memory",
-    "bluetooth",
-    "custom/hyprmon"
+    "cpu",
+    "custom/camera",
+    "custom/hyprmon",
+    "tray"
   ],
   "hyprland/workspaces": {
     "format": "{name}: {icon}",
@@ -34,7 +34,12 @@
   },
   "tray": {
     "icon-size": 16,
-    "spacing": 10
+    "spacing": 10,
+    "ignore-list": [
+      "chrome_status_icon_1",
+      "com.obsproject.Studio",
+      "vlc"
+    ]
   },
   "custom/music": {
     "format": "  {}",
@@ -66,7 +71,7 @@
   },
   "cpu": {
     "interval": 1,
-    "format": "  {usage:>2}%",
+    "format": "{usage:>2}%",
     "format-icons": [
       "▁",
       "▂",
@@ -83,20 +88,20 @@
     "format": " {used:0.1f}G/{total:0.1f}G"
   },
   "pulseaudio": {
-  "format": "{icon} {volume}%",
-  "format-muted": "",
-  "format-icons": {
-    "default": [
-      "",
-      "",
-      " "
-    ]
-  },
+    "format": "{icon} {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "default": [
+        "",
+        "",
+        " "
+      ]
+    },
     "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-  "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
-  "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
-  "on-click": "pavucontrol"
-},
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+    "on-click": "pavucontrol"
+  },
   "battery": {
     "interval": 5,
     "states": {
@@ -126,5 +131,13 @@
     "tooltip": true,
     "tooltip-format": "Monitor Manager",
     "on-click": "nwg-displays"
+  },
+  "custom/camera": {
+    "format": "",
+    "tooltip": true,
+    "tooltip-format": "Camera  •  L: GUI  •  M: day preset  •  R: night preset",
+    "on-click": "cameractrlsgtk4",
+    "on-click-middle": "webcam-day",
+    "on-click-right": "webcam-night"
   }
 }

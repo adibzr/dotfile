@@ -42,15 +42,13 @@ button {
   background: transparent;
 }
 
-#bluetooth,
+#custom-camera,
 #custom-music,
-#tray,
 #backlight,
 #clock,
 #battery,
 #pulseaudio,
 #network,
-#cpu,
 #memory,
 #custom-lock,
 #custom-power,
@@ -63,6 +61,12 @@ button {
   border-radius: 8px;
 }
 
+#tray,
+#cpu {
+  padding: 0.5rem 1rem;
+  margin: 2px 3px;
+  border-radius: 8px;
+}
 /* Colors for modules */
 #clock {
   color: #89b4fa;
