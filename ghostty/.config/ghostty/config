@@ -8,5 +8,17 @@ background-opacity = 0.9
 gtk-titlebar = false
 # custom-shader = /home/chris/bloom.glsl
 #custom-shader = /home/chris/crt.glsl
+copy-on-select = clipboard
 keybind = ctrl+v=paste_from_clipboard
+
+# tmux: Ctrl+<digit> -> prefix (C-b) + digit -> select-window N
+keybind = ctrl+1=text:\x021
+keybind = ctrl+2=text:\x022
+keybind = ctrl+3=text:\x023
+keybind = ctrl+4=text:\x024
+keybind = ctrl+5=text:\x025
+keybind = ctrl+6=text:\x026
+keybind = ctrl+7=text:\x027
+keybind = ctrl+8=text:\x028
+keybind = ctrl+9=text:\x029
 
